@@ -44,3 +44,18 @@ class RockPaper:
                     break
             except ValueError:
                 print("Oops we need and odd number greater and 3 lets try again")
+
+    def run_game(self):
+        win_conditions = {
+            "RockScissors": "Rock crushes Scissors",
+            "RockLizard": "Rock crushes Lizard",
+            "ScissorsPaper": "Scissors cuts Paper",
+            "ScissorsLizard": "Scissors decapitates Lizard",
+            "PaperRock": "Paper Covers Rock",
+            "PaperSpock": "Paper Disproves Spock",
+            "LizardSpock": "Lizard poisons Spock",
+            "LizardPaper": "Lizard eats Paper",
+            "SpockScissors": "Spock Smashes Scissors",
+            "SpockRock": "Spock Vaporizes Rock"
+        }
+        pass
