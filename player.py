@@ -6,6 +6,7 @@ class Player:
 
     def play_game(self):
         count = 1
+        print(f"it is {self.name}'s turn")
         for gesture in self.gestures:
             print(f"to choose {gesture} press {count}:")
             count += 1
