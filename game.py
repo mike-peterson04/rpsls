@@ -19,7 +19,7 @@ class RockPaper:
                 print("oops we need a number between 1 and 3 please try again")
         if choice == 1:
             self.player_one = Human()
-            self.player_two = Computer()
+            self.player_two = Computer("Player 2")
             self.game_set()
 
         elif choice == 2:
@@ -27,8 +27,8 @@ class RockPaper:
             self.player_two = Human()
             self.game_set()
         else:
-            self.player_one = Computer()
-            self.player_two = Computer()
+            self.player_one = Computer("Player 1")
+            self.player_two = Computer("Player 2")
             self.game_set()
 
     def game_set(self):
@@ -70,3 +70,15 @@ class RockPaper:
             else:
                 print(f"{self.player_two.name} wins as their {win_conditions[p2_choice + p1_choice]}")
                 self.player_two.score += 1
+        self.game_win()
+
+    def game_win(self):
+        if self.player_one.score > self.player_two.score:
+            print(f"Congratulations to {self.player_one.name} who triumphed over {self.player_two.name}")
+            print(f"With a score of  {self.player_one.score} to {self.player_two.score}")
+        elif self.player_two.score > self.player_one.score:
+            print(f"Congratulations to {self.player_two.name} who triumphed over {self.player_one.name}")
+            print(f"With a score of  {self.player_two.score} to {self.player_one.score}")
+        else:
+            print(f"something went wrong: for error tracking {self.player_one.score}, {self.player_two.score} ")
+
