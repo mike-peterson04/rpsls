@@ -5,11 +5,13 @@ class Player:
         self.score = 0
 
     def play_game(self):
+        # ask user to pick gesture
         count = 1
         print(f"it is {self.name}'s turn")
         for gesture in self.gestures:
             print(f"to choose {gesture} press {count}:")
             count += 1
+            # input validation
         while True:
             try:
                 result = int(input())

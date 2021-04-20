@@ -6,9 +6,7 @@ class Computer(Player):
         super().__init__()
         self.name = name
 
-
+    # override play_game method for computer players to pick random gesture
     def play_game(self):
 
         return self.gestures[random.randint(1, len(self.gestures)) - 1]
-
-

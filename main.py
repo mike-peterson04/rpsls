@@ -2,6 +2,7 @@ from game import RockPaper
 
 
 def run_mvp():
+    # create and run the game
     rock = RockPaper()
     rock.run_game()
 
